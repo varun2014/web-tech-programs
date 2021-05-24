@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Program-4</title></head>
+<body>
+<script type="text/javascript">
+var str = prompt("Enter the Input", "");
+if (!(isNaN(str)))
+{
+var num, num2, rev = 0, remainder;
+num = parseInt(str);
+num2 = num;
+while (num != 0)
+{
+remainder = num % 10;
+num = parseInt(num / 10);
+
+rev = rev * 10 + remainder;
+}
+product = num2 * rev;
+alert("Reverse of " + str + " is " + rev);
+alert("product of " + num2 + " and " + rev + " is " + product);
+}
+else
+{
+str = str.toUpperCase();
+var count = 0;
+for (var j = 0; j < str.length; j++)
+{
+var chr = str.charAt(j);
+if (chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+{
+	count=count+1;
+}
+}
+alert("The number of vowels are " + count); 
+
+for (var i = 0; i < str.length; i++)
+{
+var chr = str.charAt(i);
+if (chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+{
+	break;
+}
+}
+
+
+if (i < str.length)
+alert("The position of the left most vowel is " + (i + 1));
+else
+alert("No vowel found in the entered string");
+}
+</script>
+</body>
+</html>
